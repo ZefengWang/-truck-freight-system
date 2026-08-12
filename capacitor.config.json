@@ -1,0 +1,8 @@
+{
+  "appId": "com.zefengwang.truckfreight",
+  "appName": "货车装车货运明细",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}

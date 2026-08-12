@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">货车装车货运明细</string>
+    <string name="title_activity_main">货车装车货运明细</string>
+    <string name="package_name">com.zefengwang.truckfreight</string>
+    <string name="custom_url_scheme">com.zefengwang.truckfreight</string>
+</resources>
