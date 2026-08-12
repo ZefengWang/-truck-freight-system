@@ -1,0 +1,25 @@
+{
+  "name": "货车装车货运明细统计",
+  "short_name": "货车装车明细",
+  "description": "货车装车货运明细统计系统移动端：装车记录、运费核算、奖励管理、月度报表",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f3f5f9",
+  "theme_color": "#1f6feb",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "icon-512.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "maskable"
+    }
+  ]
+}
