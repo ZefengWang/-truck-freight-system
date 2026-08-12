@@ -103,17 +103,19 @@ jobs:
         run: |
           cd ios/App
           xcodebuild -project App.xcodeproj -scheme App \
-            -configuration Debug \
+            -configuration Release \
             -sdk iphonesimulator \
             -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath ./build \
             CODE_SIGNING_ALLOWED=NO \
             build
+          echo "BUILD_PATH=$(pwd)/build/Build/Products/Release-iphonesimulator" >> "$GITHUB_ENV"
 
       - name: Archive iOS app bundle
         run: |
           mkdir -p dist
-          find ios/App/build -name "*.app" -maxdepth 6 -type d | head -1 | xargs -I{} cp -R {} dist/
-          (cd dist && zip -r ../truck-freight-ios-simulator.zip .)
+          cp -R "$BUILD_PATH/App.app" dist/
+          (cd dist && zip -r ../truck-freight-ios-simulator.zip . )
 
       - name: Upload iOS artifact
         uses: actions/upload-artifact@v4
