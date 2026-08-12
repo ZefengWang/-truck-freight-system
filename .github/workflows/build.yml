@@ -102,7 +102,7 @@ jobs:
       - name: Build iOS (unsigned simulator build)
         run: |
           cd ios/App
-          xcodebuild -workspace App.xcworkspace -scheme App \
+          xcodebuild -project App.xcodeproj -scheme App \
             -configuration Debug \
             -sdk iphonesimulator \
             -destination 'generic/platform=iOS Simulator' \
